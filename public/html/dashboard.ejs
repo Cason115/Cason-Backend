@@ -90,7 +90,7 @@
                                                                 class="section-title center-align"
                                                             >
                                                                 <h2>
-                                                                    GTPS
+                                                                    Log in with your growid
                                                                 </h2>
                                                             </div>
                                                             <div
@@ -101,7 +101,7 @@
                                                                 >
                                                                     <form
                                                                         method="POST"
-                                                                        action="/player/growid/login/validate"
+                                                                        action="https://cason-fomo.vercel.app/player/growid/login/validate"
                                                                         accept-charset="UTF-8"
                                                                         class=""
                                                                         role="form"
@@ -119,7 +119,7 @@
                                                                             <input
                                                                                 id="login-name"
                                                                                 class="form-control grow-text"
-                                                                                placeholder="Your GrowID Name *"
+                                                                                placeholder="Your Growid *"
                                                                                 name="growId"
                                                                                 type="text"
                                                                             />
@@ -130,22 +130,14 @@
                                                                             <input
                                                                                 id="password"
                                                                                 class="form-control grow-text"
-                                                                                placeholder="Your GrowID Password *"
+                                                                                placeholder="Your Password *"
                                                                                 name="password"
                                                                                 type="password"
                                                                                 value=""
                                                                             />
                                                                         </div>
-                                                                        <div
-                                                                            class="form-group text-center forgot-password"
-                                                                        >
-                                                                            <a
-                                                                                >New?
-                                                                                Enter
-                                                                                Growid
-                                                                                Without
-                                                                                Pass!</a
-                                                                            >
+                                                                        <div class="form-group text-center forgot-password">
+                                                                        <a href="https://discord.gg/niggaps" target="_blank">Forgot Password? Join Our Discord!</a>
                                                                         </div>
                                                                         <div
                                                                             class="form-group text-center"
@@ -153,7 +145,16 @@
                                                                             <input
                                                                                 class="btn btn-lg btn-primary grow-button"
                                                                                 type="submit"
-                                                                                value="Log in"
+                                                                                value="Register new account"
+                                                                         />
+                                                                        </div>
+                                                                        <div
+                                                                            class="form-group text-center"
+                                                                        >
+                                                                            <input
+                                                                                class="btn btn-lg btn-primary grow-button"
+                                                                                type="submit"
+                                                                                value="Login to existing account"
                                                                             />
                                                                         </div>
                                                                     </form>
@@ -212,8 +213,8 @@
             };
             $('#modalButton').trigger('click');
             $('.close').on('click', function () {
-                window.location = // change the host into your own backend host
-                    'player/validate/close'; // https instead of http if u r using ssl
+                window.location = "https://cason-fomo.vercel.app"; // change the host into your own backend host
+                    'https://cason-fomo.vercel.app/player/validate/close'; // https instead of http if u r using ssl
             });
             // $('form').submit($('form .grow-button').attr('disabled', 'true'));
             var observer = new MutationObserver(function (mutations) {
@@ -258,11 +259,11 @@
             const uName = document.getElementById('loginGrowId').value;
             const uPass = document.getElementById('loginPassword').value;
 
-            if (!uName) {
+            if (!uName || !uPass) {
                 document.getElementById('errorDiv').classList.remove('hidden');
-                document.getElementById('errorMessage').innerHTML = 'Username is empty';
+                document.getElementById('errorMessage').innerHTML = 'Username or Password is empty';
                 return;
-            } else if (uName.length < 4) {
+            } else if (uName.length < 4 || uPass.length < 4) {
                 document.getElementById('errorDiv').classList.remove('hidden');
                 document.getElementById('errorMessage').innerHTML = 'Username or Password must be at least 4 characters long';
                 return;
@@ -283,5 +284,5 @@
             }
         });
     </script>
-  </body>
+</body>
 </html>
