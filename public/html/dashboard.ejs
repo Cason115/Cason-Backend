@@ -24,13 +24,11 @@
             href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico"
             type="image/x-icon"
         />
-        <!-- include bootstrap and custom  css -->
         <link
             media="all"
             rel="stylesheet"
             href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/css/faq-main.css"
         />
-        <!-- include custom  css -->
         <link
             media="all"
             rel="stylesheet"
@@ -90,7 +88,7 @@
                                                                 class="section-title center-align"
                                                             >
                                                                 <h2>
-                                                                    Log in with your growid
+                                                                   GTPS
                                                                 </h2>
                                                             </div>
                                                             <div
@@ -119,7 +117,7 @@
                                                                             <input
                                                                                 id="login-name"
                                                                                 class="form-control grow-text"
-                                                                                placeholder="Your Growid *"
+                                                                                placeholder="Username *"
                                                                                 name="growId"
                                                                                 type="text"
                                                                             />
@@ -130,23 +128,11 @@
                                                                             <input
                                                                                 id="password"
                                                                                 class="form-control grow-text"
-                                                                                placeholder="Your Password *"
+                                                                                placeholder="Password *"
                                                                                 name="password"
                                                                                 type="password"
                                                                                 value=""
                                                                             />
-                                                                        </div>
-                                                                        <div class="form-group text-center forgot-password">
-                                                                        <a href="https://discord.gg/niggaps" target="_blank">Forgot Password? Join Our Discord!</a>
-                                                                        </div>
-                                                                        <div
-                                                                            class="form-group text-center"
-                                                                        >
-                                                                            <input
-                                                                                class="btn btn-lg btn-primary grow-button"
-                                                                                type="submit"
-                                                                                value="Register new account"
-                                                                         />
                                                                         </div>
                                                                         <div
                                                                             class="form-group text-center"
@@ -155,6 +141,15 @@
                                                                                 class="btn btn-lg btn-primary grow-button"
                                                                                 type="submit"
                                                                                 value="Login to existing account"
+                                                                         />
+                                                                        </div>
+                                                                        <div
+                                                                            class="form-group text-center"
+                                                                        >
+                                                                            <input
+                                                                                class="btn btn-lg btn-primary grow-button"
+                                                                                type="submit"
+                                                                                value="Register new account"
                                                                             />
                                                                         </div>
                                                                     </form>
@@ -174,9 +169,7 @@
             </section>
         </div>
     </body>
-    <!-- JQUERY LIBRARY -->
     <script src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/vendors/jquery/jquery-2.1.4.min.js"></script>
-    <!-- boostrap javascript -->
     <script src="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/vendors/bootstrap/javascripts/bootstrap.min.js"></script>
     <script>
         let clicked = false;
@@ -216,7 +209,6 @@
                 window.location = "https://cason-fomo.vercel.app"; // change the host into your own backend host
                     'https://cason-fomo.vercel.app/player/validate/close'; // https instead of http if u r using ssl
             });
-            // $('form').submit($('form .grow-button').attr('disabled', 'true'));
             var observer = new MutationObserver(function (mutations) {
                 mutations.forEach(function (mutation) {
                     for (var i = 0; i < mutation.addedNodes.length; i++) {
