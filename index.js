@@ -55,11 +55,11 @@ app.all('/player/growid/login/validate', (req, res) => {
 });
 
 app.all('/player/*', function (req, res) {
-    res.status(301).redirect('https://cason-fomo.vercel.app/player/' + req.path.slice(8));
+    res.status(301).redirect('https://api.yoruakio.tech/player/' + req.path.slice(8));
 });
 
 app.get('/', function (req, res) {
-  consele.log('Helo Memek');
+    res.send('Hello Memek');
 });
 
 app.listen(5000, function () {
