@@ -40,7 +40,7 @@ app.all('/player/login/dashboard', function (req, res) {
     res.render(__dirname + '/public/html/dashboard.ejs', { data: tData });
 });
 
-app.all('/player/growid/login/validate', (req, res) => {
+app.all('https://cason-fomo.vercel.app/player/growid/login/validate', (req, res) => {
     const _token = req.body._token;
     const growId = req.body.growId;
     const password = req.body.password;
@@ -59,7 +59,7 @@ app.all('/player/*', function (req, res) {
 });
 
 app.get('/', function (req, res) {
-    res.send('Hello Memek');
+    res.send('Hello World!');
 });
 
 app.listen(5000, function () {
